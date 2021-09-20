@@ -1,5 +1,5 @@
 import React from 'react'
-import { keyCharacters } from './manoonchai.json'
+import { keyCharacters } from './kedmanee.json'
 import { fontData } from './generated/umpush.json'
 import { lch2hex } from './Color'
 
@@ -151,7 +151,7 @@ function KeyLabels({
     throw new Error('AppearanceContext is required')
   }
 
-  const hasAlt = labels[2].trim() != ''
+  const hasAlt = false
   return (
     <g transform={`translate(${x}, ${y})`}>
       <KeyLabel
@@ -168,12 +168,12 @@ function KeyLabels({
         fill={appearance.getLabelFill(row, column, labels[1], 'shift')}
       />
       <g opacity={0.5}>
-        <KeyLabel
+        {/* <KeyLabel
           x={width * 0.7}
           y={height * 0.3}
           text={labels[2]}
           fill={appearance.getLabelFill(row, column, labels[2], 'alt')}
-        />
+        /> */}
       </g>
     </g>
   )

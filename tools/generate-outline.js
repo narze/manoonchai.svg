@@ -1,6 +1,6 @@
 const opentype = require('opentype.js')
 const font = opentype.loadSync(process.argv[2])
-const characters = require('../src/manoonchai.json')
+const characters = require('../src/kedmanee.json')
   .keyCharacters.flat(2)
   .flatMap((c) => (c && Array.from(c)) || [])
 const characterList = Array.from(new Set(characters))
